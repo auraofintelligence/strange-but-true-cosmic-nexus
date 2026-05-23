@@ -6,11 +6,15 @@ All rights reserved except as allowed below.
 
 This is a custom public-interest licence. It is not an OSI-approved open-source licence.
 
-## 1. Visitor Sign-Up Notes
+## 1. Visitor Sign-Up Information
 
-Any sign-up note, message, boundary note or contribution summary created by a visitor belongs to that visitor.
+The Cosmic Nexus sign-up form is not a local Markdown builder.
 
-Cosmic Nexus does not claim ownership over visitor-submitted personal context, project notes, source leads, cultural boundary notes, fieldwork hints, travel ideas or collaboration messages.
+When a visitor presses **Send sign-up**, the information they enter is submitted to the Strange But True intake/inbox for collection and follow-up.
+
+Submitted information may be reviewed, stored, triaged into interest lanes, used to reply, used to manage permission state, and used to coordinate possible research, film, festival, travel, civic, technical, governance or partnership next steps.
+
+Cosmic Nexus does not claim ownership over visitor-submitted personal context, project notes, source leads, cultural boundary notes, fieldwork hints, travel ideas or collaboration messages. Submitting information does not transfer ownership of a visitor's original material to Cosmic Nexus or Strange But True.
 
 The public website does not create a public profile, account, membership record or public contributor listing unless a separate human agreement is made later.
 
