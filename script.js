@@ -1,6 +1,6 @@
 const navItems = [
   ["home", "Home", "index.html"],
-  ["onboarding", "Onboarding", "onboarding.html"],
+  ["onboarding", "Sign Up", "onboarding.html"],
   ["atlas", "Atlas", "atlas.html"],
   ["governance", "Governance", "governance.html"],
   ["films", "Films", "films.html"],
@@ -64,47 +64,84 @@ function setupToTop() {
   sync();
 }
 
-function setupOnboardingForm() {
-  const form = document.querySelector("[data-onboarding-form]");
+function getCheckedValues(form, name) {
+  return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`))
+    .map((input) => input.value);
+}
+
+function buildSignupSummary(form) {
+  const data = new FormData(form);
+  const interests = getCheckedValues(form, "interests");
+  const contributions = getCheckedValues(form, "contributions");
+
+  return [
+    "Cosmic Nexus sign-up",
+    "",
+    `Name or team: ${data.get("name") || "Not supplied"}`,
+    `Contact: ${data.get("reply_to") || "Not supplied"}`,
+    `Organisation or project: ${data.get("organisation") || "Not supplied"}`,
+    `Location/timezone: ${data.get("location") || "Not supplied"}`,
+    `Primary role: ${data.get("role") || "Not supplied"}`,
+    `Sign-up intent: ${data.get("intent") || "Not supplied"}`,
+    `Public attribution preference: ${data.get("attribution") || "Not supplied"}`,
+    "",
+    "Interest lanes:",
+    interests.length ? interests.map((item) => `- ${item}`).join("\n") : "- Not supplied",
+    "",
+    "Possible contribution:",
+    contributions.length ? contributions.map((item) => `- ${item}`).join("\n") : "- Not supplied",
+    "",
+    "Boundary or protocol note:",
+    data.get("boundary") || "Not supplied",
+    "",
+    "Message:",
+    data.get("notes") || "Not supplied",
+    "",
+    "Consent:",
+    data.get("consent") ? "Visitor confirmed the sign-up privacy warning." : "Consent checkbox was not ticked."
+  ].join("\n");
+}
+
+function setupSignupForm() {
+  const form = document.querySelector("[data-signup-form]");
   if (!form) return;
 
-  form.addEventListener("submit", (event) => {
-    event.preventDefault();
-    const data = new FormData(form);
-    const today = new Date().toISOString().slice(0, 10);
-    const md = [
-      "# Cosmic Nexus onboarding note",
-      "",
-      `- Date: ${today}`,
-      `- Name or team: ${data.get("name") || "Not supplied"}`,
-      `- Role: ${data.get("role") || "Not supplied"}`,
-      "",
-      "## Interest",
-      "",
-      data.get("interest") || "Not supplied",
-      "",
-      "## Boundary note",
-      "",
-      data.get("boundary") || "Not supplied",
-      "",
-      "## Suggested next step",
-      "",
-      "Route this note to the right Cosmic Nexus lane: atlas, film, governance, travel, legal memory or source review."
-    ].join("\n");
+  const messageField = form.querySelector("[data-signup-message]");
+  const copyButton = form.querySelector("[data-copy-signup]");
+  const status = form.querySelector("[data-signup-status]");
 
-    const blob = new Blob([md], { type: "text/markdown" });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "cosmic-nexus-onboarding-note.md";
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
+  const syncMessage = () => {
+    messageField.value = buildSignupSummary(form).slice(0, 3800);
+  };
+
+  form.addEventListener("input", syncMessage);
+  form.addEventListener("change", syncMessage);
+  form.addEventListener("submit", () => {
+    syncMessage();
+    if (status) {
+      status.textContent = "Sending sign-up...";
+    }
   });
+
+  copyButton?.addEventListener("click", async (event) => {
+    event.preventDefault();
+    syncMessage();
+    try {
+      await navigator.clipboard.writeText(messageField.value);
+      if (status) {
+        status.textContent = "Sign-up summary copied.";
+      }
+    } catch (error) {
+      if (status) {
+        status.textContent = "Copy failed. Select the form text and copy it manually.";
+      }
+    }
+  });
+
+  syncMessage();
 }
 
 renderHeader();
 renderFooter();
 setupToTop();
-setupOnboardingForm();
+setupSignupForm();

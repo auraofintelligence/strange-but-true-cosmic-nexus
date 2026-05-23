@@ -5,7 +5,7 @@ Cosmic Nexus is a standalone Strange But True family website for blending sci-fi
 It is intentionally multi-page:
 
 - `index.html` - public gateway
-- `onboarding.html` - visitor roles and Markdown onboarding note
+- `onboarding.html` - real sign-up form, visitor roles and public/private boundary prompts
 - `atlas.html` - source, hypothesis, story, fieldwork and cultural-care lanes
 - `governance.html` - Extra Chair method, P4A, Web3 Sensorium, Legal Memory and cryptographic civic-intelligence links
 - `films.html` - film, festival, CYOA and worldbuilding pathways

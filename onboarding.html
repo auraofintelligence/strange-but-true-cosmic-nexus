@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Cosmic Nexus onboarding for visitors, researchers, artists, filmmakers, travellers, civic modellers and agent teams.">
+    <meta name="description" content="Cosmic Nexus sign-up form for visitors, researchers, artists, filmmakers, travellers, civic modellers and early contributors.">
     <link rel="icon" href="assets/sbt-icon.png">
-    <title>Onboarding | Cosmic Nexus</title>
+    <title>Sign Up | Cosmic Nexus</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,12 +15,31 @@
     <a class="skip-link" href="#main">Skip to content</a>
     <header class="site-header" data-site-header></header>
     <main id="main">
-      <section class="page-hero" aria-labelledby="page-title">
-        <div>
-          <h1 id="page-title">Onboarding</h1>
-          <p>Cosmic Nexus starts gently: pick a role, name the boundary, and leave a clear note that a human or agent team can understand later.</p>
+      <section class="page-hero signup-hero" aria-labelledby="page-title">
+        <div class="signup-hero-copy">
+          <h1 id="page-title">Sign Up</h1>
+          <p>Join the early Cosmic Nexus list as a visitor, researcher, filmmaker, traveller, civic modeller, festival builder or careful source mapper.</p>
         </div>
-        <img src="assets/strange-but-true-banner.webp" alt="Strange But True banner artwork">
+        <div class="sbt-cosmic-lockup">
+          <svg class="sbt-cutout" viewBox="0 0 1600 1152" role="img" aria-labelledby="sbt-cutout-title">
+            <title id="sbt-cutout-title">Strange But True neon sign</title>
+            <defs>
+              <filter id="sbt-dark-alpha" color-interpolation-filters="sRGB">
+                <feColorMatrix
+                  in="SourceGraphic"
+                  result="alphaMask"
+                  type="matrix"
+                  values="0 0 0 0 0
+                          0 0 0 0 0
+                          0 0 0 0 0
+                          1.1 1.1 1.1 0 -0.72"
+                />
+                <feComposite in="SourceGraphic" in2="alphaMask" operator="in" />
+              </filter>
+            </defs>
+            <image href="assets/strange-but-true-banner.webp" width="1600" height="1152" preserveAspectRatio="xMidYMid meet" filter="url(#sbt-dark-alpha)" />
+          </svg>
+        </div>
       </section>
 
       <section class="section" aria-labelledby="roles-title">
@@ -51,40 +70,132 @@
         </div>
       </section>
 
-      <section class="section form-section" aria-labelledby="note-title">
+      <section class="section signup-section" id="signup" aria-labelledby="signup-title">
         <div class="form-copy">
-          <span class="section-label">Agent-readable handoff</span>
-          <h2 id="note-title">Create a small onboarding note.</h2>
-          <p>This stays in your browser. It downloads a Markdown file you can keep, send, or drop into a repo later.</p>
+          <span class="section-label">Early access sign-up</span>
+          <h2 id="signup-title">Tell us how you want to enter the nexus.</h2>
+          <p>This form sends a sign-up note to the Strange But True inbox. It does not create a public profile, account, membership or published record.</p>
         </div>
-        <form class="note-form" data-onboarding-form>
-          <label>
-            Name or team
-            <input name="name" type="text" placeholder="Example: Brisbane film crew">
+        <form class="signup-form" data-signup-form action="https://script.google.com/macros/s/AKfycbyhKWOuIHgi5LVLniO-_ZnMp0ITOufBBPR94PMImQXTt7GRu7Wt_hiHnk_gJJdDg-m_/exec" method="post">
+          <input type="hidden" name="form_type" value="enquiry">
+          <input type="hidden" name="topic" value="Cosmic Nexus sign-up">
+          <input type="hidden" name="message" data-signup-message>
+          <input class="honeypot" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <fieldset>
+            <legend>Contact</legend>
+            <div class="form-row">
+              <label>
+                Name or team
+                <input name="name" type="text" autocomplete="name" placeholder="Example: Brisbane film crew" required>
+              </label>
+              <label>
+                Email or best contact path
+                <input name="reply_to" type="text" autocomplete="email" placeholder="Email, website or phone" required>
+              </label>
+            </div>
+            <div class="form-row">
+              <label>
+                Organisation or project
+                <input name="organisation" type="text" placeholder="Optional">
+              </label>
+              <label>
+                Location or timezone
+                <input name="location" type="text" placeholder="Brisbane / online">
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Role and intent</legend>
+            <div class="form-row">
+              <label>
+                Primary role
+                <select name="role" required>
+                  <option>Curious visitor</option>
+                  <option>Research mapper</option>
+                  <option>Filmmaker or artist</option>
+                  <option>Festival builder</option>
+                  <option>Civic modeller</option>
+                  <option>Travel scout</option>
+                  <option>Technical or data contributor</option>
+                  <option>Partner, sponsor or venue lead</option>
+                </select>
+              </label>
+              <label>
+                What kind of sign-up is this?
+                <select name="intent" required>
+                  <option>Keep me updated</option>
+                  <option>I may contribute research or sources</option>
+                  <option>I may help with film, art or festivals</option>
+                  <option>I may help with civic tech or Sensorium work</option>
+                  <option>I may help with travel, fieldwork or sites</option>
+                  <option>I may help with funding, venue or partnerships</option>
+                </select>
+              </label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Interest lanes</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="interests" value="Ancient records and archives"> Ancient records and archives</label>
+              <label><input type="checkbox" name="interests" value="Sites, temple carvings and symbols"> Sites, temple carvings and symbols</label>
+              <label><input type="checkbox" name="interests" value="Out-of-place objects and artefacts"> Out-of-place objects and artefacts</label>
+              <label><input type="checkbox" name="interests" value="Mythology, Dreamtime and song/rhyme protocols"> Mythology, Dreamtime and song/rhyme protocols</label>
+              <label><input type="checkbox" name="interests" value="Modern UAP disclosure and evidence mapping"> Modern UAP disclosure and evidence mapping</label>
+              <label><input type="checkbox" name="interests" value="Ocean search, wrecks and blue-domain mysteries"> Ocean search, wrecks and blue-domain mysteries</label>
+              <label><input type="checkbox" name="interests" value="Subterranean infrastructure mapping"> Subterranean infrastructure mapping</label>
+              <label><input type="checkbox" name="interests" value="Web3 Sensorium, space weather and civic intelligence"> Web3 Sensorium, space weather and civic intelligence</label>
+              <label><input type="checkbox" name="interests" value="Films, festivals and reality-format worldbuilding"> Films, festivals and reality-format worldbuilding</label>
+              <label><input type="checkbox" name="interests" value="Legal Memory, P4A and governance simulations"> Legal Memory, P4A and governance simulations</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Possible contribution</legend>
+            <div class="checkbox-grid">
+              <label><input type="checkbox" name="contributions" value="Source research or citation checking"> Source research or citation checking</label>
+              <label><input type="checkbox" name="contributions" value="Field notes, local site knowledge or travel leads"> Field notes, local site knowledge or travel leads</label>
+              <label><input type="checkbox" name="contributions" value="Film, writing, music, design or festival production"> Film, writing, music, design or festival production</label>
+              <label><input type="checkbox" name="contributions" value="Data, sensors, maps, AI or Web3 systems"> Data, sensors, maps, AI or Web3 systems</label>
+              <label><input type="checkbox" name="contributions" value="Governance, legal, protocol or cultural review"> Governance, legal, protocol or cultural review</label>
+              <label><input type="checkbox" name="contributions" value="Venue, funding, introductions or partnerships"> Venue, funding, introductions or partnerships</label>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Public/private boundary</legend>
+            <label>
+              Public attribution preference
+              <select name="attribution">
+                <option>Keep my sign-up private for now</option>
+                <option>You may mention my name/team after asking first</option>
+                <option>I am open to being listed publicly later</option>
+                <option>Use only an organisation/project name after asking first</option>
+              </select>
+            </label>
+            <label>
+              Boundary or protocol note
+              <textarea name="boundary" rows="4" placeholder="What should stay private, permissioned, culturally governed, legally reviewed, or off limits?"></textarea>
+            </label>
+            <label>
+              Message
+              <textarea name="notes" rows="5" placeholder="What are you drawn to, what can you help with, or what should Cosmic Nexus know before replying?"></textarea>
+            </label>
+          </fieldset>
+
+          <label class="consent-check">
+            <input type="checkbox" name="consent" value="yes" required>
+            I understand this sends a private sign-up note to Strange But True. I will not include passwords, private keys, restricted cultural knowledge, sensitive legal documents or private health details.
           </label>
-          <label>
-            Role
-            <select name="role">
-              <option>Curious visitor</option>
-              <option>Research mapper</option>
-              <option>Filmmaker or artist</option>
-              <option>Festival builder</option>
-              <option>Civic modeller</option>
-              <option>Travel scout</option>
-            </select>
-          </label>
-          <label>
-            Interest
-            <textarea name="interest" rows="4" placeholder="What part of Cosmic Nexus are you drawn to?"></textarea>
-          </label>
-          <label>
-            Boundary note
-            <textarea name="boundary" rows="3" placeholder="What should stay private, permissioned or public?"></textarea>
-          </label>
+
           <div class="form-actions">
-            <button class="button primary" type="submit">Download Markdown</button>
+            <button class="button primary" type="submit">Send sign-up</button>
+            <button class="button secondary" type="button" data-copy-signup>Copy summary</button>
             <button class="button secondary" type="reset">Reset</button>
           </div>
+          <p class="form-status" data-signup-status aria-live="polite"></p>
         </form>
       </section>
 
