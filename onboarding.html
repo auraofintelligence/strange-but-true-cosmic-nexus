@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cosmic Nexus onboarding for visitors, researchers, artists, filmmakers, travellers, civic modellers and agent teams.">
+    <link rel="icon" href="assets/sbt-icon.png">
+    <title>Onboarding | Cosmic Nexus</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
+  </head>
+  <body data-page="onboarding">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header></header>
+    <main id="main">
+      <section class="page-hero" aria-labelledby="page-title">
+        <div>
+          <h1 id="page-title">Onboarding</h1>
+          <p>Cosmic Nexus starts gently: pick a role, name the boundary, and leave a clear note that a human or agent team can understand later.</p>
+        </div>
+        <img src="assets/strange-but-true-banner.webp" alt="Strange But True banner artwork">
+      </section>
+
+      <section class="section" aria-labelledby="roles-title">
+        <div class="section-heading">
+          <span class="section-label">Choose your doorway</span>
+          <h2 id="roles-title">Different visitors can help without pretending to be the same kind of expert.</h2>
+        </div>
+        <div class="role-grid">
+          <article><strong>Curious visitor</strong><span>Explore the map, ask better questions, and keep claims in the right confidence lane.</span></article>
+          <article><strong>Research mapper</strong><span>Add source trails, dates, places, uncertainty notes and corrections.</span></article>
+          <article><strong>Filmmaker or artist</strong><span>Use the myth layer and UAP sandbox as story engines, not proof shortcuts.</span></article>
+          <article><strong>Festival builder</strong><span>Design public challenge formats where teams turn ideas into scenes, maps, prototypes or debates.</span></article>
+          <article><strong>Civic modeller</strong><span>Connect scenarios to P4A, Legal Memory, Sensorium and public ledger habits.</span></article>
+          <article><strong>Travel scout</strong><span>Link museums, observatories, heritage places, coastlines, science sites and event routes.</span></article>
+        </div>
+      </section>
+
+      <section class="section split-section" aria-labelledby="boundary-title">
+        <div>
+          <span class="section-label">Public/private boundary</span>
+          <h2 id="boundary-title">The first rule is simple: do not turn private wonder into public data without consent.</h2>
+          <p>Private notes, identity details, cultural material, health signals, legal records, family stories, sacred knowledge and raw location trails need care. Public pages should carry summaries, source links, permission state and correction paths instead of leaking the whole notebook.</p>
+        </div>
+        <div class="rule-stack">
+          <article><strong>Public</strong><span>Published pages, source names, repo links, corrected summaries and public event invitations.</span></article>
+          <article><strong>Permissioned</strong><span>Research notes, cultural context, team drafts, support signals and workshop materials shared with named people.</span></article>
+          <article><strong>Private</strong><span>Personal memory, identity, legal notes, sensitive source files, family context and unreviewed claims.</span></article>
+        </div>
+      </section>
+
+      <section class="section form-section" aria-labelledby="note-title">
+        <div class="form-copy">
+          <span class="section-label">Agent-readable handoff</span>
+          <h2 id="note-title">Create a small onboarding note.</h2>
+          <p>This stays in your browser. It downloads a Markdown file you can keep, send, or drop into a repo later.</p>
+        </div>
+        <form class="note-form" data-onboarding-form>
+          <label>
+            Name or team
+            <input name="name" type="text" placeholder="Example: Brisbane film crew">
+          </label>
+          <label>
+            Role
+            <select name="role">
+              <option>Curious visitor</option>
+              <option>Research mapper</option>
+              <option>Filmmaker or artist</option>
+              <option>Festival builder</option>
+              <option>Civic modeller</option>
+              <option>Travel scout</option>
+            </select>
+          </label>
+          <label>
+            Interest
+            <textarea name="interest" rows="4" placeholder="What part of Cosmic Nexus are you drawn to?"></textarea>
+          </label>
+          <label>
+            Boundary note
+            <textarea name="boundary" rows="3" placeholder="What should stay private, permissioned or public?"></textarea>
+          </label>
+          <div class="form-actions">
+            <button class="button primary" type="submit">Download Markdown</button>
+            <button class="button secondary" type="reset">Reset</button>
+          </div>
+        </form>
+      </section>
+
+      <nav class="next-trail" aria-label="Page trail">
+        <a class="button secondary" href="index.html">Previous: Home</a>
+        <a class="button primary" href="atlas.html">Next: Atlas</a>
+      </nav>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <button class="to-top" type="button" data-to-top aria-label="Back to top">Top</button>
+    <script src="script.js"></script>
+  </body>
+</html>
