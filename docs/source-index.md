@@ -30,7 +30,7 @@ This index is for humans and agent teams. It names the seed material without pub
 - Mineral Moonshots Cosmic Nexus brief: https://auraofintelligence.github.io/mineral-moonshots/briefs/cosmic-nexus.html
 - P4A Web3 Sensorium: https://auraofintelligence.github.io/p4a_xyz/pages/web3-sensorium.html
 - Legal Memory Workbench: https://auraofintelligence.github.io/legal-memory-workbench/
-- Australian World Travel strategy: https://auraofintelligence.github.io/Australian-world-travel/strategy.html
+- Strange But True Travel Oracle: https://auraofintelligence.github.io/strange-but-true-travel-oracle/
 - AUKUS Space Gambit: https://auraofintelligence.github.io/aukus-space-gambit/
 - GAJRA Earth-Space-AI Summit: https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/
 - Space Weather News: https://auraofintelligence.github.io/space-weather-news/
