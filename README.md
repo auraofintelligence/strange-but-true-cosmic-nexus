@@ -11,5 +11,12 @@ It is intentionally multi-page:
 - `films.html` - film, festival, CYOA and worldbuilding pathways
 - `connections.html` - verified neighbouring repo and GitHub Pages cards
 - `sources.html` - seed-document titles, freshness state and public/private boundaries
+- `licence.html` - custom Strange But True Cosmic Nexus public licence
+
+## Licence
+
+This repository uses the custom [Strange But True Cosmic Nexus Public Licence](LICENCE.md).
+
+It is open enough for public-interest learning, study, adaptation and accessibility improvements, but it protects the Strange But True identity, creative works, source summaries, narrative material, AI/dataset boundaries and public/private consent lines.
 
 The site is static HTML/CSS/JS and is ready for GitHub Pages.

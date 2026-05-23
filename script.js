@@ -47,6 +47,7 @@ function renderFooter() {
       <nav class="footer-links" aria-label="Footer links">
         <a href="connections.html">Connections</a>
         <a href="sources.html">Sources</a>
+        <a href="licence.html">Licence</a>
         <a href="https://auraofintelligence.github.io/strange-but-true/" target="_blank" rel="noopener noreferrer">Strange But True</a>
         <a href="https://github.com/auraofintelligence/strange-but-true-cosmic-nexus" target="_blank" rel="noopener noreferrer">Source repo</a>
       </nav>
