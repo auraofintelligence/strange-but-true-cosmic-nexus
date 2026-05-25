@@ -23,13 +23,15 @@ This index is for humans and agent teams. It names the seed material without pub
 - `Web3_Sensorium_for_Science_Debate.md`
 - `1-page_Earthquake_Prediction_with_the_Space_Weather_News.md`
 - `Space_Weather_Data_IFTTT.md`
-- These map to the P4A Web3 Sensorium framing and the public `space-weather-news` repo.
+- These map to the P4A Web3 Sensorium framing, the public `space-weather-news` repo and the Mineral Moonshots `space-weather-hub` brief.
+- The atlas space-weather segment now includes star maps, sky archives and alien disclosure context as research lanes, not as proof claims.
 
 ## First public links
 
 - Strange But True: https://auraofintelligence.github.io/strange-but-true/
 - Mineral Moonshots Cosmic Nexus brief: https://auraofintelligence.github.io/mineral-moonshots/briefs/cosmic-nexus.html
 - P4A Web3 Sensorium: https://auraofintelligence.github.io/p4a_xyz/pages/web3-sensorium.html
+- Mineral Moonshots Space Weather Hub: https://auraofintelligence.github.io/mineral-moonshots/briefs/space-weather-hub.html
 - Legal Memory Workbench: https://auraofintelligence.github.io/legal-memory-workbench/
 - Strange But True Travel Oracle: https://auraofintelligence.github.io/strange-but-true-travel-oracle/
 - AUKUS Space Gambit: https://auraofintelligence.github.io/aukus-space-gambit/

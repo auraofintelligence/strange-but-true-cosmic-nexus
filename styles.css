@@ -438,6 +438,35 @@ p {
   margin-bottom: 1.2rem;
 }
 
+.card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .55rem .85rem;
+  align-items: center;
+  margin-top: .9rem;
+}
+
+.card-links a {
+  display: inline-flex;
+  align-items: center;
+  color: var(--teal);
+  font-weight: 800;
+  font-size: .88rem;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(91, 225, 219, .35);
+  overflow-wrap: normal;
+}
+
+.card-links a:hover {
+  color: var(--star);
+  border-bottom-color: var(--star);
+}
+
+.connection-card .card-links a,
+.feature-card .card-links a {
+  margin-bottom: 0;
+}
+
 .next-trail {
   max-width: 1180px;
   margin: 0 auto;
