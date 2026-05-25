@@ -289,6 +289,11 @@ a {
   overflow-wrap: anywhere;
 }
 
+h1 {
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
 h2 {
   font-size: clamp(2rem, 4.5vw, 4.1rem);
   line-height: 1;
@@ -876,7 +881,8 @@ textarea {
 
   .hero-copy h1,
   .page-hero h1 {
-    font-size: clamp(3rem, 18vw, 4.5rem);
+    font-size: clamp(2.55rem, 13vw, 3.4rem);
+    line-height: .94;
   }
 
   .next-trail {

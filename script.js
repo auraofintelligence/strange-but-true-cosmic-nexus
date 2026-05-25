@@ -43,7 +43,7 @@ function renderFooter() {
   if (!footer) return;
   footer.innerHTML = `
     <div class="footer-inner">
-      <p>Cosmic Nexus. A Strange But True public atlas for careful wonder.</p>
+      <p>Cosmic Nexus. An in-development Strange But True adventure atlas for careful wonder, travel planning and friendship systems.</p>
       <nav class="footer-links" aria-label="Footer links">
         <a href="connections.html">Connections</a>
         <a href="sources.html">Sources</a>

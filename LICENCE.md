@@ -48,7 +48,7 @@ Any responsible research use should preserve attribution, provenance, public/pri
 
 ## 5. Source, Culture And Evidence Boundary
 
-Cosmic Nexus is a public atlas for careful wonder. It holds history mapping, mythology, out-of-place object questions, UAP disclosure context, ocean and subterranean hypotheses, films, travel routes, civic simulations and governance methods.
+Cosmic Nexus is an in-development public adventure atlas for careful wonder. It holds history mapping, mythology, out-of-place object questions, UAP disclosure context, ocean and subterranean hypotheses, films, travel routes, civic simulations and governance methods.
 
 Nothing in this repository should be treated as:
 

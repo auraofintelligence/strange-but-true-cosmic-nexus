@@ -1,6 +1,7 @@
 # Cosmic Nexus source index
 
 First build date: 2026-05-23, Australia/Brisbane.
+Copy refocus date: 2026-05-25, Australia/Brisbane.
 
 This index is for humans and agent teams. It names the seed material without publishing private local paths.
 
@@ -37,4 +38,4 @@ This index is for humans and agent teams. It names the seed material without pub
 
 ## Boundary
 
-Cosmic Nexus can hold fiction, history mapping, hypotheses and civic simulations, but public claims should stay labelled as source, hypothesis, story, private memory or governance model.
+Cosmic Nexus can hold fiction, history mapping, hypotheses, travel quests and civic simulations, but public claims should stay labelled as source, hypothesis, adventure, story, private memory or governance model. The site is a build invitation, not a claim that the underlying maps, travel system or Web3 Sensorium are already complete.

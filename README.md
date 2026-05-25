@@ -1,15 +1,15 @@
 # Cosmic Nexus
 
-Cosmic Nexus is a standalone Strange But True family website for blending sci-fi imagination with real history mapping, out-of-place objects, mythology, modern UAP disclosure, ancient records, temple carvings, subterranean infrastructure, ocean search, films, travel strategy, Web3 Sensorium work, public simulations and grassroots governance.
+Cosmic Nexus is a standalone Strange But True family website in development. It invites mystery lovers, researchers, travellers, filmmakers, festival builders and civic-tech people to help build the underlying maps, source trails, travel planning loops, friend-making systems and governance habits needed before the idea can become a real public platform.
 
 It is intentionally multi-page:
 
-- `index.html` - public gateway
-- `onboarding.html` - real sign-up form, visitor roles and public/private boundary prompts
-- `atlas.html` - source, hypothesis, story, fieldwork and cultural-care lanes
-- `governance.html` - Extra Chair method, P4A, Web3 Sensorium, Legal Memory and cryptographic civic-intelligence links
-- `films.html` - film, festival, CYOA and worldbuilding pathways
-- `connections.html` - verified neighbouring repo and GitHub Pages cards
+- `index.html` - public gateway and build invitation
+- `onboarding.html` - collected private sign-up form, build status, roles and public/private boundary prompts
+- `atlas.html` - source, hypothesis, adventure, fieldwork and cultural-care lanes
+- `governance.html` - Extra Chair method, P4A, Web3 Sensorium design target, Legal Memory and civic-intelligence boundaries
+- `films.html` - film, festival, CYOA, travel quest and worldbuilding pathways
+- `connections.html` - verified neighbouring repo and GitHub Pages cards, framed as ingredients rather than a finished system
 - `sources.html` - seed-document titles, freshness state and public/private boundaries
 - `licence.html` - custom Strange But True Cosmic Nexus public licence
 
