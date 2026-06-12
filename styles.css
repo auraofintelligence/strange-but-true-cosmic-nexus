@@ -556,46 +556,63 @@ p {
 }
 
 .page-hero {
+  --hero-image: url("assets/hero-atlas-global-galactic.webp");
   position: relative;
   overflow: hidden;
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(320px, 470px);
-  gap: 2rem;
+  display: flex;
   align-items: center;
-  min-height: 410px;
-  padding: 4rem max(1.25rem, calc((100vw - 1180px) / 2));
+  min-height: min(720px, calc(100vh - 76px));
+  padding: clamp(5rem, 10vw, 8rem) max(1.25rem, calc((100vw - 1180px) / 2)) clamp(4.5rem, 8vw, 7rem);
   background:
-    linear-gradient(135deg, rgba(2, 4, 10, .98), rgba(11, 20, 35, .92));
+    linear-gradient(90deg, rgba(2, 4, 10, .97) 0%, rgba(2, 4, 10, .86) 39%, rgba(2, 4, 10, .48) 70%, rgba(2, 4, 10, .16) 100%),
+    var(--hero-image) center / cover no-repeat;
   color: var(--star);
   border-bottom: 1px solid var(--line);
 }
 
+.page-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(2, 4, 10, .2) 0%, transparent 44%, rgba(2, 4, 10, .64) 100%),
+    linear-gradient(120deg, rgba(91, 225, 219, .08), transparent 38%);
+  pointer-events: none;
+}
+
+.page-hero > div {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+}
+
 .page-hero h1 {
-  font-size: clamp(3rem, 7vw, 7rem);
+  font-size: clamp(3.8rem, 9vw, 8.6rem);
   line-height: .9;
   text-transform: uppercase;
   margin: 0 0 1rem;
+  text-shadow: 0 16px 40px rgba(0, 0, 0, .52);
 }
 
 .page-hero p {
-  max-width: 700px;
-  font-size: 1.16rem;
+  max-width: 760px;
+  font-size: clamp(1.05rem, 1.55vw, 1.38rem);
   color: rgba(255, 255, 255, .82);
+  text-shadow: 0 12px 30px rgba(0, 0, 0, .52);
 }
 
 .page-hero img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  object-fit: cover;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255, 255, 255, .18);
+  display: none;
 }
 
 .signup-hero {
-  min-height: min(660px, calc(100vh - 76px));
+  min-height: min(760px, calc(100vh - 76px));
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(280px, .8fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
   background:
-    linear-gradient(90deg, rgba(2, 4, 10, .94) 0%, rgba(2, 4, 10, .76) 44%, rgba(2, 4, 10, .3) 100%),
-    url("assets/cosmic-nexus-map-table.webp") center / cover no-repeat;
+    linear-gradient(90deg, rgba(2, 4, 10, .96) 0%, rgba(2, 4, 10, .8) 44%, rgba(2, 4, 10, .28) 100%),
+    var(--hero-image, url("assets/hero-atlas-global-galactic.webp")) center / cover no-repeat;
 }
 
 .signup-hero::before {
@@ -977,14 +994,20 @@ textarea {
   }
 
   .page-hero {
-    min-height: 0;
+    min-height: min(680px, calc(100vh - 76px));
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
+    background:
+      linear-gradient(180deg, rgba(2, 4, 10, .94) 0%, rgba(2, 4, 10, .76) 55%, rgba(2, 4, 10, .44) 100%),
+      var(--hero-image) center / cover no-repeat;
   }
 
   .signup-hero {
+    grid-template-columns: 1fr;
     min-height: 760px;
     background:
       linear-gradient(180deg, rgba(2, 4, 10, .94) 0%, rgba(2, 4, 10, .76) 58%, rgba(2, 4, 10, .38) 100%),
-      url("assets/cosmic-nexus-map-table.webp") center / cover no-repeat;
+      var(--hero-image, url("assets/hero-atlas-global-galactic.webp")) center / cover no-repeat;
   }
 
   .sbt-cosmic-lockup {
