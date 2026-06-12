@@ -259,6 +259,80 @@ h3,
   white-space: nowrap;
 }
 
+.song-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, 380px);
+  gap: clamp(2rem, 6vw, 5rem);
+  align-items: center;
+  width: min(1180px, calc(100% - 2.5rem));
+  margin: 0 auto;
+  padding: clamp(3rem, 6vw, 5.5rem) 0;
+}
+
+.song-feature-copy {
+  max-width: 660px;
+}
+
+.song-feature-copy h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2.4rem, 5.8vw, 5.8rem);
+  line-height: .94;
+  text-transform: uppercase;
+}
+
+.song-feature-copy p {
+  max-width: 610px;
+  color: rgba(238, 247, 255, .84);
+  font-size: clamp(1.02rem, 1.5vw, 1.18rem);
+}
+
+.signup-song-feature {
+  padding-top: clamp(2.4rem, 5vw, 4.4rem);
+}
+
+.phone-frame {
+  position: relative;
+  width: min(100%, 380px);
+  margin: 0 auto;
+  padding: 1.05rem .72rem 1.3rem;
+  border: 1px solid rgba(255, 255, 255, .18);
+  border-radius: 34px;
+  background:
+    linear-gradient(145deg, #111a2d, #02040a 56%, #182a34),
+    #050607;
+  box-shadow:
+    0 34px 74px rgba(0, 0, 0, .38),
+    0 0 44px rgba(91, 225, 219, .12);
+}
+
+.phone-frame::after {
+  content: "";
+  position: absolute;
+  inset: .48rem;
+  pointer-events: none;
+  border: 1px solid rgba(255, 255, 255, .16);
+  border-radius: 26px;
+}
+
+.phone-speaker {
+  width: 64px;
+  height: 5px;
+  margin: 0 auto .8rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, .28);
+}
+
+.phone-player {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 9 / 16;
+  border: 1px solid rgba(255, 255, 255, .14);
+  border-radius: 22px;
+  background: #000;
+}
+
 .section {
   max-width: 1180px;
   margin: 0 auto;
@@ -867,6 +941,15 @@ textarea {
     flex-direction: column;
   }
 
+  .song-feature {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .song-feature-copy {
+    max-width: none;
+  }
+
   .footer-inner {
     align-items: flex-start;
     grid-template-columns: 1fr;
@@ -922,6 +1005,16 @@ textarea {
   .wide-band {
     padding-top: 3.4rem;
     padding-bottom: 3.4rem;
+  }
+
+  .song-feature {
+    width: min(100% - 1.5rem, 1180px);
+    padding-top: 2.8rem;
+    padding-bottom: 2.8rem;
+  }
+
+  .song-feature-copy h2 {
+    font-size: clamp(2.2rem, 12vw, 3.2rem);
   }
 
   .hero-copy h1,

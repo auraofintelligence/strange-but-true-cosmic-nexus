@@ -57,8 +57,13 @@ function setupToTop() {
   const button = document.querySelector("[data-to-top]");
   if (!button) return;
 
-  const sync = () => button.classList.toggle("visible", window.scrollY > 520);
+  const phoneFrameVisible = () => Array.from(document.querySelectorAll(".phone-frame")).some((frame) => {
+    const rect = frame.getBoundingClientRect();
+    return rect.bottom > 0 && rect.top < window.innerHeight;
+  });
+  const sync = () => button.classList.toggle("visible", window.scrollY > 520 && !phoneFrameVisible());
   window.addEventListener("scroll", sync, { passive: true });
+  window.addEventListener("resize", sync);
   button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
   sync();
 }
