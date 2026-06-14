@@ -564,7 +564,7 @@ p {
   min-height: min(720px, calc(100vh - 76px));
   padding: clamp(5rem, 10vw, 8rem) max(1.25rem, calc((100vw - 1180px) / 2)) clamp(4.5rem, 8vw, 7rem);
   background:
-    linear-gradient(90deg, rgba(2, 4, 10, .97) 0%, rgba(2, 4, 10, .86) 39%, rgba(2, 4, 10, .48) 70%, rgba(2, 4, 10, .16) 100%),
+    linear-gradient(90deg, rgba(4, 8, 10, .88) 0%, rgba(4, 8, 10, .66) 36%, rgba(4, 8, 10, .18) 74%, rgba(4, 8, 10, .08) 100%),
     var(--hero-image) center / cover no-repeat;
   color: var(--star);
   border-bottom: 1px solid var(--line);
@@ -574,31 +574,43 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, rgba(2, 4, 10, .2) 0%, transparent 44%, rgba(2, 4, 10, .64) 100%),
-    linear-gradient(120deg, rgba(91, 225, 219, .08), transparent 38%);
+  background: linear-gradient(180deg, rgba(4, 8, 10, .02) 0%, transparent 46%, rgba(4, 8, 10, .28) 100%);
   pointer-events: none;
 }
 
 .page-hero > div {
   position: relative;
   z-index: 1;
-  max-width: 760px;
+  width: min(650px, 100%);
+  max-width: 650px;
 }
 
 .page-hero h1 {
-  font-size: clamp(3.8rem, 9vw, 8.6rem);
-  line-height: .9;
+  max-width: 650px;
+  font-size: clamp(3.35rem, 7vw, 6rem);
+  line-height: .88;
   text-transform: uppercase;
-  margin: 0 0 1rem;
+  margin: 0 0 1.35rem;
   text-shadow: 0 16px 40px rgba(0, 0, 0, .52);
+  text-wrap: balance;
 }
 
 .page-hero p {
-  max-width: 760px;
-  font-size: clamp(1.05rem, 1.55vw, 1.38rem);
-  color: rgba(255, 255, 255, .82);
+  max-width: 570px;
+  font-size: clamp(1.05rem, 1.8vw, 1.28rem);
+  color: rgba(255, 255, 255, .9);
   text-shadow: 0 12px 30px rgba(0, 0, 0, .52);
+}
+
+body[data-page="governance"] .page-hero h1,
+body[data-page="connections"] .page-hero h1,
+body[data-page="onboarding"] .page-hero h1 {
+  font-size: clamp(3rem, 6.15vw, 5.65rem);
+}
+
+body[data-page="films"] .page-hero h1 {
+  max-width: 610px;
+  font-size: clamp(2.9rem, 5.85vw, 5.2rem);
 }
 
 .page-hero img {
@@ -608,10 +620,10 @@ p {
 .signup-hero {
   min-height: min(760px, calc(100vh - 76px));
   display: grid;
-  grid-template-columns: minmax(0, .9fr) minmax(280px, .8fr);
+  grid-template-columns: minmax(0, 650px) minmax(280px, 1fr);
   gap: clamp(1.5rem, 4vw, 4rem);
   background:
-    linear-gradient(90deg, rgba(2, 4, 10, .96) 0%, rgba(2, 4, 10, .8) 44%, rgba(2, 4, 10, .28) 100%),
+    linear-gradient(90deg, rgba(4, 8, 10, .88) 0%, rgba(4, 8, 10, .66) 36%, rgba(4, 8, 10, .18) 74%, rgba(4, 8, 10, .08) 100%),
     var(--hero-image, url("assets/hero-atlas-global-galactic.webp")) center / cover no-repeat;
 }
 
@@ -619,9 +631,7 @@ p {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(120deg, rgba(91, 225, 219, .08), transparent 36%),
-    linear-gradient(180deg, rgba(255, 255, 255, .03), rgba(2, 4, 10, .28));
+  background: linear-gradient(180deg, rgba(4, 8, 10, .02) 0%, transparent 46%, rgba(4, 8, 10, .28) 100%);
   pointer-events: none;
 }
 
@@ -998,7 +1008,7 @@ textarea {
     padding-top: 4.5rem;
     padding-bottom: 4rem;
     background:
-      linear-gradient(180deg, rgba(2, 4, 10, .94) 0%, rgba(2, 4, 10, .76) 55%, rgba(2, 4, 10, .44) 100%),
+      linear-gradient(180deg, rgba(4, 8, 10, .86) 0%, rgba(4, 8, 10, .72) 54%, rgba(4, 8, 10, .28) 100%),
       var(--hero-image) center / cover no-repeat;
   }
 
@@ -1006,7 +1016,7 @@ textarea {
     grid-template-columns: 1fr;
     min-height: 760px;
     background:
-      linear-gradient(180deg, rgba(2, 4, 10, .94) 0%, rgba(2, 4, 10, .76) 58%, rgba(2, 4, 10, .38) 100%),
+      linear-gradient(180deg, rgba(4, 8, 10, .86) 0%, rgba(4, 8, 10, .72) 54%, rgba(4, 8, 10, .28) 100%),
       var(--hero-image, url("assets/hero-atlas-global-galactic.webp")) center / cover no-repeat;
   }
 
@@ -1044,6 +1054,13 @@ textarea {
   .page-hero h1 {
     font-size: clamp(2.55rem, 13vw, 3.4rem);
     line-height: .94;
+  }
+
+  body[data-page="governance"] .page-hero h1,
+  body[data-page="connections"] .page-hero h1,
+  body[data-page="onboarding"] .page-hero h1,
+  body[data-page="films"] .page-hero h1 {
+    font-size: clamp(2.35rem, 10.6vw, 3rem);
   }
 
   .next-trail {
