@@ -14,7 +14,7 @@ Each link below reflects an evidenced family, lineage or direct connection. This
 
 ### Aura Systems Image Atlas source projects
 
-- [aura-systems-image-atlas](https://github.com/auraofintelligence/aura-systems-image-atlas) - [public page](https://auraofintelligence.github.io/aura-systems-image-atlas/) - source project represented in this visual atlas, source project represented in visual atlas.
+- [aura-systems-image-atlas](https://github.com/auraofintelligence/aura-systems-image-atlas) - [public page](https://auraofintelligence.github.io/aura-systems-image-atlas/) - source project represented in this visual atlas.
 - [GAJRA_Earth-Space-AI_Summit](https://github.com/auraofintelligence/GAJRA_Earth-Space-AI_Summit) - [public page](https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/) - explicit cross-reference, shared research architecture.
 - [mineral-moonshots](https://github.com/auraofintelligence/mineral-moonshots) - [public page](https://auraofintelligence.github.io/mineral-moonshots/) - shared research architecture.
 - [p4a_xyz](https://github.com/auraofintelligence/p4a_xyz) - [public page](https://auraofintelligence.github.io/p4a_xyz/) - shared research architecture.
