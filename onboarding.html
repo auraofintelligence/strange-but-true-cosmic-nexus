@@ -11,6 +11,12 @@
     <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Nunito+Sans:wght@700;800;900&display=swap" rel="stylesheet">
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+<style id="network-portrait-style">
+.network-portrait-shell{width:min(100%,360px);margin:1.1rem auto;background:#10091b;border:1px solid #75618c;border-radius:14px;overflow:hidden}
+.network-portrait-video,video[src*="/assets/protopian-portraits/"],video:has(source[src*="/assets/protopian-portraits/"]){display:block!important;width:100%!important;max-width:360px!important;height:auto!important;min-height:0!important;max-height:none!important;aspect-ratio:9/16!important;object-fit:contain!important;margin-inline:auto!important;background:#08050e;border:0}
+.network-portrait-shell p{margin:.55rem .8rem;font-size:.86rem;line-height:1.45}.network-portrait-shell a{color:#e0c5ff;text-decoration:underline}
+.phone:has(source[src*="/assets/protopian-portraits/"]),:is(.phone-frame,.phone-screen,.song-frame,.phone-video-wrap,.phone-embed,.video-embed,.phone):has(video[src*="/assets/protopian-portraits/"]),:is(.phone-frame,.phone-screen,.song-frame,.phone-video-wrap,.phone-embed,.video-embed,.phone):has(video[src*="/assets/protopian-portraits/"]),:is(.phone-frame,.phone-screen,.song-frame,.phone-video-wrap,.phone-embed,.video-embed):has(.network-portrait-video){height:auto!important;aspect-ratio:auto!important;min-height:0!important;max-width:380px;margin-inline:auto;overflow:hidden}
+</style>
 </head>
   <body data-page="onboarding">
     <a class="skip-link" href="#main">Skip to content</a>
@@ -51,7 +57,9 @@
         </div>
         <div class="phone-frame" aria-label="Phone-framed YouTube player for Heliospheric Lantern">
           <div class="phone-speaker" aria-hidden="true"></div>
-          <iframe class="phone-player" src="https://www.youtube-nocookie.com/embed/jkwkZdIZepw?rel=0&amp;modestbranding=1&amp;playsinline=1" title="Heliospheric Lantern by Luke Hayes 360 VR" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <section class="network-portrait-shell" data-protopian-key="18" aria-label="Heliospheric Lantern, current portrait lyric video">
+<video class="network-portrait-video" controls playsinline preload="none" width="720" height="1280" poster="https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/heliospheric-lantern-portrait-cover-v1.jpg" aria-label="Heliospheric Lantern by i C. infinity"><source src="https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/heliospheric-lantern-portrait-web-v1.mp4" type="video/mp4"><a href="https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/heliospheric-lantern-portrait-web-v1.mp4">Open portrait video</a></video>
+<p><a href="https://auraofintelligence.github.io/i-C-infinity-music-universe/assets/protopian-portraits/heliospheric-lantern-portrait-web-v1.mp4">Open current portrait lyric video</a></p></section>
         </div>
       </section>
 
