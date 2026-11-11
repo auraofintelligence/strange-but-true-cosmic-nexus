@@ -11,6 +11,7 @@ const navItems = [
 ];
 
 const page = document.body.dataset.page || "home";
+const footerPages = [...navItems, ["licence", "Licence", "licence.html"]];
 
 function renderHeader() {
   const header = document.querySelector("[data-site-header]");
@@ -24,7 +25,7 @@ function renderHeader() {
   header.innerHTML = `
     <nav class="nav" aria-label="Main navigation">
       <a class="brand" href="index.html" aria-label="Cosmic Nexus home">
-        <span class="brand-mark">CN</span>
+        <img class="brand-mark" src="assets/cosmic-nexus-mark-192.png" width="44" height="44" alt="">
         <span class="brand-text"><strong>Cosmic Nexus</strong><span>Strange But True family</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
@@ -43,7 +44,20 @@ function renderHeader() {
 function renderFooter() {
   const footer = document.querySelector("[data-site-footer]");
   if (!footer) return;
+  const current = footerPages.findIndex(([key]) => key === page);
+  const [, previousLabel, previousHref] = footerPages[(current - 1 + footerPages.length) % footerPages.length];
+  const [, nextLabel, nextHref] = footerPages[(current + 1) % footerPages.length];
   footer.innerHTML = `
+    <nav class="footer-page-nav" aria-label="Previous and next pages">
+      <a class="footer-page-link" href="${previousHref}" rel="prev">
+        <span class="footer-arrow" aria-hidden="true">←</span>
+        <span><span class="footer-direction">Previous</span><strong>${previousLabel}</strong></span>
+      </a>
+      <a class="footer-page-link footer-page-next" href="${nextHref}" rel="next">
+        <span><span class="footer-direction">Next</span><strong>${nextLabel}</strong></span>
+        <span class="footer-arrow" aria-hidden="true">→</span>
+      </a>
+    </nav>
     <div class="footer-inner">
       <p>Cosmic Nexus. An in-development Strange But True adventure atlas for careful wonder, travel planning and friendship systems.</p>
       <nav class="footer-links" aria-label="Footer links">
@@ -52,6 +66,7 @@ function renderFooter() {
         <a href="https://github.com/auraofintelligence/strange-but-true-cosmic-nexus" target="_blank" rel="noopener noreferrer">Source repo</a>
       </nav>
     </div>
+    <button class="to-top" type="button" data-to-top aria-label="Back to top" title="Back to top" hidden>↑</button>
   `;
 }
 
@@ -59,14 +74,13 @@ function setupToTop() {
   const button = document.querySelector("[data-to-top]");
   if (!button) return;
 
-  const phoneFrameVisible = () => Array.from(document.querySelectorAll(".phone-frame")).some((frame) => {
-    const rect = frame.getBoundingClientRect();
-    return rect.bottom > 0 && rect.top < window.innerHeight;
-  });
-  const sync = () => button.classList.toggle("visible", window.scrollY > 520 && !phoneFrameVisible());
+  const sync = () => { button.hidden = window.scrollY < 320; };
   window.addEventListener("scroll", sync, { passive: true });
-  window.addEventListener("resize", sync);
-  button.addEventListener("click", () => window.scrollTo({ top: 0, behavior: "smooth" }));
+  window.addEventListener("pageshow", sync);
+  button.addEventListener("click", () => {
+    document.querySelector(".site-header .brand")?.focus({ preventScroll: true });
+    window.scrollTo({ top: 0, behavior: "auto" });
+  });
   sync();
 }
 

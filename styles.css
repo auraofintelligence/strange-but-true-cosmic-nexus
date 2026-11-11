@@ -64,6 +64,7 @@ img {
   position: sticky;
   top: 0;
   z-index: 10;
+  color: var(--ink);
   background: rgba(4, 8, 18, .88);
   border-bottom: 1px solid var(--line);
   backdrop-filter: blur(16px);
@@ -89,18 +90,10 @@ img {
 }
 
 .brand-mark {
-  width: 42px;
-  height: 42px;
-  border: 1px solid rgba(91, 225, 219, .5);
-  border-radius: 50%;
-  display: grid;
-  place-items: center;
-  font-family: "Nunito Sans", Arial, sans-serif;
-  font-weight: 900;
-  font-size: .85rem;
-  color: var(--star);
-  background: linear-gradient(135deg, rgba(178, 119, 255, .28), rgba(91, 225, 219, .16));
-  box-shadow: 0 0 24px rgba(91, 225, 219, .16);
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  object-fit: contain;
 }
 
 .brand-text {
@@ -541,20 +534,6 @@ p {
   margin-bottom: 0;
 }
 
-.next-trail {
-  max-width: 1180px;
-  margin: 0 auto;
-  padding: 0 1.25rem 5rem;
-  display: flex;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.next-trail .button.secondary {
-  background: var(--white);
-  color: var(--ink);
-}
-
 .page-hero {
   --hero-image: url("assets/hero-atlas-global-galactic.webp");
   position: relative;
@@ -872,10 +851,55 @@ textarea {
   border-top: 1px solid rgba(255, 255, 255, .12);
 }
 
+.footer-page-nav {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 1.25rem 1.25rem 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .75rem;
+}
+
+.footer-page-link {
+  display: flex;
+  align-items: center;
+  gap: clamp(.45rem, 2vw, 1rem);
+  min-height: 70px;
+  padding: .7rem clamp(.6rem, 2.3vw, 1.2rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--white);
+  color: var(--ink);
+  text-decoration: none;
+  line-height: 1.2;
+}
+
+.footer-page-link:hover {
+  border-color: var(--teal);
+}
+
+.footer-page-next {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+.footer-direction {
+  display: block;
+  margin-bottom: .3rem;
+  color: var(--muted);
+  font-size: .8rem;
+}
+
+.footer-arrow {
+  flex-shrink: 0;
+  color: var(--gold);
+  font-size: 1.35rem;
+}
+
 .footer-inner {
   max-width: 1180px;
   margin: 0 auto;
-  padding: 2rem 1.25rem;
+  padding: 2rem 1.25rem 4.35rem;
   display: grid;
   grid-template-columns: minmax(0, 1fr) auto;
   gap: 2rem;
@@ -903,24 +927,25 @@ textarea {
 
 .to-top {
   position: fixed;
-  right: 1rem;
-  bottom: 1rem;
+  right: max(1rem, env(safe-area-inset-right));
+  bottom: max(1rem, env(safe-area-inset-bottom));
   z-index: 11;
-  border: 1px solid rgba(242, 198, 109, .46);
-  background: rgba(242, 198, 109, .92);
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  padding: 0;
+  border: 1px solid var(--gold);
+  background: var(--gold);
   color: #061016;
-  border-radius: var(--radius);
-  padding: .7rem .9rem;
-  font-weight: 900;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity .2s ease;
+  border-radius: 50%;
+  font: 900 1.5rem/1 Arial, sans-serif;
+  cursor: pointer;
   box-shadow: var(--shadow);
 }
 
-.to-top.visible {
-  opacity: 1;
-  pointer-events: auto;
+.to-top:hover {
+  background: var(--copper);
 }
 
 @media (max-width: 900px) {
@@ -1063,9 +1088,6 @@ textarea {
     font-size: clamp(2.35rem, 10.6vw, 3rem);
   }
 
-  .next-trail {
-    flex-direction: column;
-  }
 }
 
 /* Source-linked places and the private field notebook. */
