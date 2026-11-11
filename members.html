@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Free Cosmic Nexus membership brings together private articles, films and research with invitation-only mystery and travel circles.">
+    <meta name="referrer" content="no-referrer">
+    <title>Members | Cosmic Nexus</title>
+    <link rel="stylesheet" href="styles.css?v=20261111-members">
+    <link rel="stylesheet" href="members.css">
+    <link rel="icon" href="assets/favicon-raster-32.png" type="image/png">
+  </head>
+  <body data-page="members">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header" data-site-header></header>
+    <main id="main">
+      <section class="members-hero" aria-labelledby="members-title">
+        <div class="members-intro">
+          <div>
+            <span class="section-label">Cosmic Nexus membership</span>
+            <h1 id="members-title">Follow the mystery together.</h1>
+            <p>Read the members’ library, compare sources in a private circle and plan where to go next.</p>
+          </div>
+          <div class="member-panel" id="member-access">
+            <div id="member-preview">
+              <h2>Free membership</h2>
+              <p id="member-launch-status">Member sign-in is being prepared. Register your interest to hear when it opens.</p>
+              <a class="button primary" href="onboarding.html#signup">Register interest</a>
+            </div>
+            <div id="member-signin" hidden>
+              <h2>Join or sign in</h2>
+              <p>Membership is free. Use your email to receive a one-time sign-in code.</p>
+              <form id="email-form" class="member-form">
+                <label>Email address <input name="email" type="email" autocomplete="email" maxlength="254" required></label>
+                <button class="button primary" type="submit">Email me a code</button>
+              </form>
+              <form id="code-form" class="member-form" hidden>
+                <label>Email code <input name="code" type="text" autocomplete="one-time-code" inputmode="numeric" pattern="[0-9]{6,10}" required></label>
+                <div class="form-actions">
+                  <button class="button primary" type="submit">Open members area</button>
+                  <button id="change-email" class="button secondary" type="button">Use a different email</button>
+                </div>
+              </form>
+              <p id="auth-message" role="status"></p>
+            </div>
+            <div id="member-session" hidden>
+              <h2>Your members area</h2>
+              <p id="member-email"></p>
+              <nav class="form-actions" aria-label="Member navigation">
+                <a class="button primary" href="#library">Open library</a>
+                <a class="button secondary" href="#circles">Open circles</a>
+              </nav>
+              <button id="member-signout" class="text-button" type="button">Sign out</button>
+              <p id="session-message" role="status"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="member-overview" aria-label="What membership includes">
+        <div class="method-grid">
+          <article><strong>Members’ library</strong><span>Articles, films and research for reading between field trips.</span></article>
+          <article><strong>Mystery circles</strong><span>Invite people to compare evidence, link sources and record open questions.</span></article>
+          <article><strong>Trip planning</strong><span>Share route ideas, draft field plans and discuss the access or local guidance you need.</span></article>
+        </div>
+        <p class="member-public-links"><a href="field-guide.html">Explore the public field guide</a></p>
+      </section>
+
+      <div id="member-workspace" hidden>
+        <section class="section" id="library" aria-labelledby="library-title">
+          <div class="section-heading">
+            <h2 id="library-title">Members’ library</h2>
+            <p>Articles, films and research published for signed-in members.</p>
+          </div>
+          <p id="library-message" role="status"></p>
+          <div id="library-items" class="member-library"></div>
+        </section>
+
+        <section class="section" id="circles" aria-labelledby="circles-title">
+          <div class="section-heading">
+            <h2 id="circles-title">Your circles</h2>
+            <p>Circle entries are visible to invited members. Share source material and trip details only with permission.</p>
+          </div>
+          <div class="circle-layout">
+            <aside class="member-panel" aria-label="Manage your circles">
+              <form id="choose-circle" class="member-form" hidden>
+                <label>Choose a circle <select id="circle-picker"></select></label>
+              </form>
+              <details id="new-circle" open>
+                <summary>Create a circle</summary>
+                <form id="create-circle" class="member-form">
+                  <label>Circle name <input name="name" maxlength="100" required></label>
+                  <label>Description <textarea name="description" rows="3" maxlength="1000"></textarea></label>
+                  <button class="button secondary" type="submit">Create circle</button>
+                </form>
+              </details>
+              <details id="join-circle-details">
+                <summary>Join with an invitation</summary>
+                <form id="join-circle" class="member-form">
+                  <label>Invitation code <input name="invite" maxlength="36" autocomplete="off" required></label>
+                  <button class="button secondary" type="submit">Join circle</button>
+                </form>
+              </details>
+              <p id="circles-message" role="status"></p>
+            </aside>
+
+            <div>
+              <p id="circle-empty">Create a circle or enter an invitation code to get started.</p>
+              <div id="circle-workspace" hidden>
+                <div class="circle-heading">
+                  <div><h3 id="circle-title"></h3><p id="circle-description"></p></div>
+                  <div class="form-actions">
+                    <button id="create-invite" class="button secondary" type="button" hidden>Create invitation</button>
+                    <button id="leave-circle" class="button secondary" type="button" hidden>Leave circle</button>
+                  </div>
+                </div>
+                <div id="invite-result" class="member-panel" hidden>
+                  <label>Single-use invitation code <input id="invite-code" readonly></label>
+                  <p>Share this code directly with the person you want to invite. It expires after seven days.</p>
+                </div>
+                <p id="circle-message" role="status"></p>
+
+                <details id="add-entry" class="member-panel">
+                  <summary>Add a research note or trip plan</summary>
+                  <form id="entry-form" class="member-form">
+                    <label>Entry type
+                      <select name="kind"><option value="research">Mystery research</option><option value="trip">Trip plan</option></select>
+                    </label>
+                    <label>Name shown in this circle <input name="author" maxlength="60" required></label>
+                    <label>Title <input name="title" maxlength="140" required></label>
+                    <label>Notes <textarea name="body" rows="5" maxlength="6000" required></textarea></label>
+                    <label>Source or planning link <input name="source" type="url" maxlength="2000" placeholder="https://"></label>
+                    <button class="button primary" type="submit">Post to this circle</button>
+                  </form>
+                </details>
+
+                <div class="circle-boards">
+                  <section aria-labelledby="research-title"><h4 id="research-title">Mystery research</h4><div id="research-entries"></div></section>
+                  <section aria-labelledby="trip-title"><h4 id="trip-title">Trip plans</h4><div id="trip-entries"></div></section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+    <script src="script.js?v=20261111-members" defer></script>
+    <script src="members-config.js" defer></script>
+    <script type="module" src="members.js"></script>
+  </body>
+</html>

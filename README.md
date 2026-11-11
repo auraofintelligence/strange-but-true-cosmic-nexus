@@ -46,6 +46,7 @@ It is intentionally multi-page:
 - `index.html` - public gateway and build invitation
 - `onboarding.html` - collected private sign-up form, build status, roles and public/private boundary prompts
 - `field-guide.html` - source-linked place discovery, theme/search filters, browser-local shortlist and Markdown field-brief download
+- `members.html` - free membership entry point with a private library and invitation-only research and trip circles when connected to Supabase
 - `atlas.html` - source, hypothesis, adventure, star-map/disclosure, fieldwork and cultural-care lanes
 - `governance.html` - Extra Chair method, P4A, Web3 Sensorium design target, Legal Memory and civic-intelligence boundaries
 - `films.html` - film, festival, CYOA, travel quest and worldbuilding pathways
@@ -89,6 +90,6 @@ The shortlist and notes use browser local storage where available. Visitors can 
 - Establish an opt-in local host and travel-circle workflow.
 - Develop the film quest formats already outlined in `films.html`.
 
-The live tools currently cover discovery and private planning. Shared accounts, reviewed public submissions and hosted expeditions require further implementation.
+The live tools cover discovery and private planning. The members area includes email sign-in, a gated library, and private circles. [Connect the member service and publish the first items](docs/members-launch.md) to open registration.
 
 Domain setup for `cosmicnexus.xyz` is recorded in [the GoDaddy launch guide](docs/domain-launch.md).

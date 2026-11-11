@@ -1,0 +1,106 @@
+.members-hero {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(100deg, #050711f7 12%, #07101dc4 62%, #050711a8),
+    url('assets/hero-connections-sensorium.webp') center / cover;
+}
+
+.members-intro {
+  display: grid;
+  grid-template-columns: 1.35fr 1fr;
+  align-items: center;
+  gap: clamp(2rem, 6vw, 5rem);
+  max-width: 1180px;
+  margin-inline: auto;
+  padding: clamp(4rem, 9vw, 8rem) 1.25rem;
+}
+
+.members-intro h1 {
+  max-width: 11ch;
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.6rem, 6.3vw, 6rem);
+  line-height: .98;
+}
+
+.members-intro p { max-width: 44ch; color: var(--ink-2); }
+.member-panel h2 { font-size: clamp(1.55rem, 3vw, 2.35rem); }
+.member-panel {
+  min-width: 0;
+  padding: clamp(1rem, 3vw, 1.65rem);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #0d1728;
+}
+
+.member-form {
+  display: grid;
+  justify-items: start;
+  gap: .85rem;
+  margin-block: .8rem;
+}
+
+.member-panel label, .member-form label {
+  display: grid;
+  gap: .35rem;
+  width: 100%;
+  font-weight: 700;
+}
+
+.member-panel input, .member-form textarea, .member-form select {
+  width: 100%;
+  min-width: 0;
+  padding: .75rem;
+  font: inherit;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.member-form textarea { resize: vertical; }
+.member-public-links { margin-top: 1rem; }
+.member-library, .circle-boards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.circle-layout {
+  display: grid;
+  grid-template-columns: minmax(235px, .75fr) minmax(0, 2fr);
+  align-items: start;
+  gap: 1.5rem;
+}
+
+.circle-heading {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: start;
+  gap: 1rem;
+}
+
+.member-panel summary { cursor: pointer; color: var(--teal); }
+.member-panel details + details { margin-top: 1rem; }
+.member-panel [role="status"]:empty { display: none; }
+.member-panel [role="status"] { margin: .75rem 0 0; }
+.member-meta { font-size: .9rem; color: var(--muted); }
+.member-body { white-space: pre-wrap; }
+.member-film { display: block; width: 100%; margin-top: 1rem; background: #000; }
+.member-entry + .member-entry { margin-top: .85rem; }
+.circle-boards h4 { margin: 1.4rem 0 .75rem; font-size: 1.1rem; }
+.member-panel .text-button { margin-top: .75rem; }
+.text-button {
+  border: 0;
+  padding: .3rem 0;
+  font: inherit;
+  color: var(--teal);
+  background: transparent;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+body[data-page="members"] button:disabled { opacity: .65; cursor: wait; }
+
+@media (max-width: 760px) {
+  .members-intro, .circle-layout, .member-library, .circle-boards { grid-template-columns: 1fr; }
+}
