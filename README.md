@@ -45,6 +45,7 @@ It is intentionally multi-page:
 
 - `index.html` - public gateway and build invitation
 - `onboarding.html` - collected private sign-up form, build status, roles and public/private boundary prompts
+- `field-guide.html` - source-linked place discovery, theme/search filters, browser-local shortlist and Markdown field-brief download
 - `atlas.html` - source, hypothesis, adventure, star-map/disclosure, fieldwork and cultural-care lanes
 - `governance.html` - Extra Chair method, P4A, Web3 Sensorium design target, Legal Memory and civic-intelligence boundaries
 - `films.html` - film, festival, CYOA, travel quest and worldbuilding pathways
@@ -74,3 +75,20 @@ feasibility, cultural authority or evidence for extraordinary claims.
 - [AUKUS Space Gambit](https://auraofintelligence.github.io/aukus-space-gambit/)
 - [GAJRA Earth Space and AI Summit](https://auraofintelligence.github.io/GAJRA_Earth-Space-AI_Summit/)
 - [Strange But True Travel Oracle](https://auraofintelligence.github.io/strange-but-true-travel-oracle/)
+
+## November 2026 refresh
+
+The field guide connects an editorial selection of unusual places to primary place sources and World Travel Patterns records. Connections focus on mystery research and getting around, with the Community Ledger as the broader discovery source.
+
+The shortlist and notes use browser local storage where available. Visitors can download a Markdown field brief. Place links and descriptions remain readable with JavaScript disabled. Serve the site over HTTP for consistent browser storage behaviour.
+
+### Next development
+
+- Add reviewed mystery entries with dated sources and a correction history.
+- Develop a pilot expedition brief from the field-guide export, including a route and local interpretation.
+- Establish an opt-in local host and travel-circle workflow.
+- Develop the film quest formats already outlined in `films.html`.
+
+The live tools currently cover discovery and private planning. Shared accounts, reviewed public submissions and hosted expeditions require further implementation.
+
+Domain setup for `cosmicnexus.xyz` is recorded in [the GoDaddy launch guide](docs/domain-launch.md).

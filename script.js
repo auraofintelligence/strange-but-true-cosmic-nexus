@@ -2,6 +2,7 @@ const navItems = [
   ["home", "Home", "index.html"],
   ["onboarding", "Sign Up", "onboarding.html"],
   ["atlas", "Atlas", "atlas.html"],
+  ["field-guide", "Field Guide", "field-guide.html"],
   ["governance", "Governance", "governance.html"],
   ["films", "Films", "films.html"],
   ["connections", "Connections", "connections.html"],

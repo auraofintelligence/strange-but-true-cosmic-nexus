@@ -41,3 +41,17 @@ This index is for humans and agent teams. It names the seed material without pub
 ## Boundary
 
 Cosmic Nexus can hold fiction, history mapping, hypotheses, travel quests and civic simulations, but public claims should stay labelled as source, hypothesis, adventure, story, private memory or governance model. The site is a build invitation, not a claim that the underlying maps, travel system or Web3 Sensorium are already complete.
+
+## Field guide refresh, 11 November 2026
+
+The new field guide is an editorial selection. Travel links open World Travel Patterns records directly and retain that project's source dates and coverage. New connection cards were selected from the public Community Ledger for mystery research and travel relevance.
+
+Primary place sources used for the initial selection are linked on each card.
+
+- Queensland Parks, Naree Budjong Djara National Park, https://parks.qld.gov.au/parks/naree-budjong-djara
+- DarkSky International, Sunshine Coast designation, 8 June 2026, https://darksky.org/news/sunshine-coast-becomes-australias-second-international-dark-sky-reserve/
+- DarkSky International, Aoraki Mackenzie, https://darksky.org/places/aoraki-mackenzie-dark-sky-reserve/0/
+- UNESCO World Heritage Centre, Rapa Nui National Park, https://whc.unesco.org/en/list/715/
+- UNESCO World Heritage Centre, West Lake Cultural Landscape of Hangzhou, https://whc.unesco.org/en/list/1334/
+
+Place descriptions and proposed research questions are original summaries. Place source review dates describe this editorial review. Current access, advisories, activity permissions, transport and prices need the dated travel research appropriate to the proposed visit.

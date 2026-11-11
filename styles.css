@@ -1067,3 +1067,35 @@ textarea {
     flex-direction: column;
   }
 }
+
+/* Source-linked places and the private field notebook. */
+.field-introduction { border-bottom: 1px solid var(--line); }
+.field-toolbar { display: grid; grid-template-columns: 2fr 1fr; gap: 1rem; margin-bottom: 1.5rem; }
+.field-toolbar label, .field-notes { display: grid; gap: .5rem; font-weight: 700; }
+.field-toolbar input, .field-toolbar select, .field-notes textarea {
+  width: 100%; min-width: 0; padding: .85rem; border: 1px solid var(--line);
+  border-radius: var(--radius); color: var(--ink); background: var(--white); font: inherit;
+}
+.field-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; }
+.field-card { border: 1px solid var(--line); border-top: 3px solid var(--teal); border-radius: var(--radius); padding: 1.6rem; background: linear-gradient(145deg, #14273b, #0a111f); }
+.field-card h3 { font-size: 1.8rem; }
+.field-question { color: var(--gold); font-size: 1.1rem; }
+.field-card details { margin: 1.1rem 0; }
+.field-card summary { cursor: pointer; color: var(--teal); }
+.field-card details p { margin-top: .7rem; }
+.field-date { color: var(--muted); font-size: .85rem; margin: 1rem 0; }
+.field-card button[aria-pressed="true"] { border-color: var(--teal); color: var(--teal); }
+.field-notes { margin: 1.5rem 0; }
+.field-notes textarea { resize: vertical; }
+[data-notebook-status] { margin-top: 1rem; color: var(--teal); }
+[hidden] { display: none !important; }
+:focus-visible { outline: 3px solid var(--gold); outline-offset: 4px; }
+@media (max-width: 700px) {
+  .field-grid, .field-toolbar { grid-template-columns: 1fr; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+section[id] { scroll-margin-top: 100px; }
